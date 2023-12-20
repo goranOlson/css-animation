@@ -123,5 +123,19 @@ header:after{
 
 /*// BASKET ANIMATION STYLES //*/
 
+.zoom {
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  width: 40px;
+  opacity: 0;
+  /* Action, and stay there*/
+  animation: zoom 1s ease forwards;
+}
 
-
+@keyframes zoom {
+  /*  Fade in and then fade out the element */
+  0%{ opacity: 0; }
+  50%{ opacity: 1; }
+  100%{ opacity: 0; right: 40px; }
+}
