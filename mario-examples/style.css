@@ -39,12 +39,29 @@ html, body{
   top: 45%;
 }
 
-/*// ELEMENTS TO ANIMATE //*/
+/* ## CSS keyframes ##
 
+  God info about ceyframe on w3scools: 
+  www.w3schools.com/css/css3_animations.asp
+*/
+
+/*// ELEMENTS TO ANIMATE //*/
+.mario {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  /* Apply keyframe to this element */
+  animation-name: drive;
+  /* animation-duration: 3s; */
+}
 
 
 /*// KEYFRAMES //*/
-
+@keyframes drive {
+  /* Set from and to state */
+  from{ transform: translateX(0); }
+  to{ transform: translateX(700px); }
+}
 
 
 
