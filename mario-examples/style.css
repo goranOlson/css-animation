@@ -54,6 +54,8 @@ html, body{
   animation-name: drive;
   animation-duration: 5s;  /* 3s */
 
+
+
   /* Tells the element to stay at the 'to' 
     forwards: set the element to use 'to' values
     backword: set the element to use 'from' values
@@ -70,6 +72,12 @@ html, body{
     Predeined values or cubic-bezier() like cubic-bezier(.29,.29,.72,.72)
     See: cubic-bezier.com  */
   transition-timing-function: linear;
+
+
+  /* animation: drive 3s both infinite linear; */
+  /* add jump: time 0.3s delay 1.2s and smoth action (only one time) */
+  animation: drive 3s both infinite linear,
+             jump 0.3s 1.2s ease;
 }
 
 .luigi {
@@ -80,7 +88,9 @@ html, body{
   animation-name: drive;
   animation-duration: 7s;
   animation-fill-mode: both;
-  animation-iteration-count: 2;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
   /* Set direction backwords.
      Also: normal, alternate (from-to-from... alternate direction )
      normal|reverse|alternate|alternate-reverse|initial|inherit  */ 
@@ -120,9 +130,14 @@ html, body{
 
 @keyframes wind {
   from{ left: -300px; }
-  to{ left: 90%; }
+  to{ left: 90%; }  /* 100% */
 }
 
+@keyframes jump {
+  0%{ top: -40px; }  /* start position (from .mario) */
+  50%{ top: -100px; }  /* After half time */
+  100%{ top: -40px; }  /* Back to first value at the end */
+}
 
 
 
