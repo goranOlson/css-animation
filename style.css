@@ -38,4 +38,33 @@ img {
     /* Multiple transforms. The second transform will move element to the right
        as the first instruction tells it to rotate 90deg! */
     transform: rotate(-90deg) translateY(200px) scale(1.5);
+
+    /* ### UNSET INSTRUCTIONS ABOVE ### */
+    transform: unset;
 }
+
+.circle {
+    width: 100px;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background-color: pink;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    /* Transition: time to new state, can be a time for all
+       or a list with separate times per instruction.
+       Delay transition with another time after the first.
+       One can specify speed curve of the transiton by adding:
+       linear | ease | ease-in |...
+       More info on: www.w3schools.com/css/css3_transitions.asp  */
+    transition: background-color 1s, transform 1.3s 1s linear;
+
+}
+
+.circle:hover {
+    background-color: salmon;
+
+    transform: rotate(360deg);
+}
+
