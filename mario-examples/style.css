@@ -67,14 +67,29 @@ html, body{
   animation-iteration-count: 2;  /* infinite */
 
   /* Set how the transition should act */
-  transition-timing-function: linear;
+  /* transition-timing-function: linear; */
+}
+
+.luigi {
+  position: absolute;
+  top: 120px;
+  left: 0;
+
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: 3;
+  /* Set direction backwords.
+     Also: normal, alternate (from-to-from... alternate direction )*/ 
+  animation-direction: reverse;
+
 }
 
 
 /*// KEYFRAMES //*/
 @keyframes drive {
   /* Set from and to state - move element at x axis */
-  from{ transform: translateX(-100px); }  /* 200px */
+  from{ transform: translateX(-150px); }  /* 200px */
   to{ transform: translateX(950px); }  /* 700px */
 }
 
