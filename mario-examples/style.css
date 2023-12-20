@@ -52,7 +52,7 @@ html, body{
   left: 0;
   /* Apply keyframe to this element */
   animation-name: drive;
-  animation-duration: 3s;
+  animation-duration: 3s;  /* 3s */
 
   /* Tells the element to stay at the 'to' 
     forwards: set the element to use 'to' values
@@ -61,15 +61,21 @@ html, body{
   */
   animation-fill-mode: both;
   /* Delay animations start */
-  animation-delay: 2s;
+  /* animation-delay: 2s; */
+
+  /* Number of times to run 'drive' */
+  animation-iteration-count: 2;  /* infinite */
+
+  /* Set how the transition should act */
+  transition-timing-function: linear;
 }
 
 
 /*// KEYFRAMES //*/
 @keyframes drive {
-  /* Set from and to state */
-  from{ transform: translateX(200px); }
-  to{ transform: translateX(700px); }
+  /* Set from and to state - move element at x axis */
+  from{ transform: translateX(-100px); }  /* 200px */
+  to{ transform: translateX(950px); }  /* 700px */
 }
 
 
