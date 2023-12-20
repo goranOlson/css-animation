@@ -66,8 +66,10 @@ html, body{
   /* Number of times to run 'drive' */
   animation-iteration-count: 2;  /* infinite */
 
-  /* Set how the transition should act */
-  /* transition-timing-function: linear; */
+  /* Set how the transition should act
+    Predeined values or cubic-bezier()
+    See: cubic-bezier.com  */
+  transition-timing-function: cubic-bezier(.29,.29,.72,.72);
 }
 
 .luigi {
@@ -78,9 +80,10 @@ html, body{
   animation-name: drive;
   animation-duration: 5s;
   animation-fill-mode: both;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   /* Set direction backwords.
-     Also: normal, alternate (from-to-from... alternate direction )*/ 
+     Also: normal, alternate (from-to-from... alternate direction )
+     normal|reverse|alternate|alternate-reverse|initial|inherit  */ 
   animation-direction: reverse;
 
 }
