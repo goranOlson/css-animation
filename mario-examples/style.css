@@ -52,14 +52,23 @@ html, body{
   left: 0;
   /* Apply keyframe to this element */
   animation-name: drive;
-  /* animation-duration: 3s; */
+  animation-duration: 3s;
+
+  /* Tells the element to stay at the 'to' 
+    forwards: set the element to use 'to' values
+    backword: set the element to use 'from' values
+    both: use both 'from' and 'to' values
+  */
+  animation-fill-mode: both;
+  /* Delay animations start */
+  animation-delay: 2s;
 }
 
 
 /*// KEYFRAMES //*/
 @keyframes drive {
   /* Set from and to state */
-  from{ transform: translateX(0); }
+  from{ transform: translateX(200px); }
   to{ transform: translateX(700px); }
 }
 
