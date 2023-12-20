@@ -1,5 +1,41 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+}
+
 .wrapper{
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-  }
+}
+
+img {
+    /* move element in X direction from origin position */
+    transform: translateX(-200px);
+
+    /* move element in Y direction from origin position */
+    transform: translateY(200px);
+
+    /* move element X / Y direction from origin position*/
+    transform: translate(200px, 200px);
+
+
+    /* Scale X - 1 is default.  */
+    transform: scaleX(2);
+    /* Scale both X and Y */
+    transform: scale(1);  /* (2) or (2, 0.5) */
+
+
+    /* # Rotate along X axis, positive or negative values */
+    transform: rotateX(60deg);
+
+    /* # Rotate along Y axis */
+    transform: rotateY(60deg);
+
+    /* Rotate along element clock wise: 0 - 360 deg */
+    transform: rotateZ(-60deg);
+
+    /* Multiple transforms. The second transform will move element to the right
+       as the first instruction tells it to rotate 90deg! */
+    transform: rotate(-90deg) translateY(200px) scale(1.5);
+}
