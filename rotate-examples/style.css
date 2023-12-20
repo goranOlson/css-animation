@@ -43,7 +43,10 @@ h1{
 }
 
 /*// ANIMATION STYLES //*/
-
+/*
+  This code will flip element so that the backside is visible on hover.
+  It uses: animation, transform and rotate to perform.
+*/
 .panels div.back {
   transform: rotateY(90deg);  /* Make element hidden */
 }
